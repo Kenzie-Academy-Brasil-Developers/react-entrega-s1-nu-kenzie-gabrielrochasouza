@@ -28,6 +28,18 @@ form input,form select{
     color: #868E96;
     height: 53px;
 }
+.form-col-left{
+    position: relative;
+}
+.form-col-left::after{
+    content: 'R$';
+    color: #868E96;
+    position: absolute;
+    top: 45px;
+    right: 15px;
+    font-size: 13px;
+    
+}
 form label{
     font-style: normal;
     font-weight: normal;
