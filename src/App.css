@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  max-width: 977px;
+  width: 100%;
+  margin: 39px auto;
+  display: flex;
+  color: rgb(0, 0, 0);
+  justify-content: space-between;
+  flex-flow: wrap;
+  padding: 10px;
+}
+.App .App-col-left{
+  max-width: 363px;
+
+}
+.App-link {
+  color: #61dafb;
+}
+main{
+  display: flex;
+}
+figcaption{
+  display: none;
+}
+aside{
+  width: 560px;
+}
+@media (max-width:970px){
+  .App-header {
+    justify-content: center;
+    padding: 0;
+  }
+
+}
+@media (max-width:469px){
+
+   .rect{
+      width: 70%;
+      margin: 0 auto;
+  }
+  h3 {
+      font-size: 15px;
+      text-align: center;
+  }
+}

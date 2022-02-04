@@ -1,0 +1,83 @@
+ul{
+
+    height: 450px;
+    padding: 0;
+    margin: 8px 0 0 0px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    overflow-y: auto;
+
+    color: #212529;
+    text-align: start;
+}
+.list-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 15px;
+}
+.list-header h2{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+}
+.list-header .buttons-section{
+    display: flex;
+}
+.list-header .buttons-section button{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 10px 0 0;
+    border-radius: 8px;
+    background: #E9ECEF;
+    color: #868E96;
+    cursor: pointer;
+    border: 1.4px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.list-header .buttons-section .selected{
+    background-color: #FD377E;
+    border: 1.4px solid #FD377E;
+    color: white;
+}
+
+.list-header .buttons-section button:hover{
+    background-color:#E34981;
+    border: 1.4px solid #E34981;
+    color: white;
+}
+@media (max-width:469px){
+    .list-header {
+       display: initial;
+
+    }
+    .list-header button {
+        width: auto;
+    }
+    .list-header .buttons-section {
+        justify-content: center;
+    }
+    .list-header h2{
+        font-size: 12px;
+        text-align: center;
+    }
+     .rect{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .list-header h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
