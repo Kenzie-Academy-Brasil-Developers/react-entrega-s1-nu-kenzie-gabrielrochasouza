@@ -27,6 +27,7 @@ h4{
 }
 button{
     background-color:#FD377E;
+    cursor: pointer;
 }
 button:hover{
     background-color:#E34981;   

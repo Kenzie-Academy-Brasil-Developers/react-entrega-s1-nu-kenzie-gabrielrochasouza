@@ -1,6 +1,6 @@
 import './style.css'
 
-
+import svg from './NoCard.svg'
 
 
 export default function CardVazio(){
@@ -22,6 +22,7 @@ export default function CardVazio(){
                 <div className='rect-title'></div>
                 <div className='rect-paragraph'></div>
             </div>
+
         </div>
         )
     

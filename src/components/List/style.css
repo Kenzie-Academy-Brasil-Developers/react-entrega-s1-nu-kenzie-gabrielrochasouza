@@ -51,10 +51,14 @@ ul{
     border: 1.4px solid #FD377E;
     color: white;
 }
-
-.list-header .buttons-section button:hover{
-    background-color:#E34981;
+.list-header .buttons-section .selected:hover{
+    background-color: #E34981;
     border: 1.4px solid #E34981;
+    color: white;
+}
+.list-header .buttons-section button:hover{
+    background-color:#868E96;
+    border: 1.4px solid #868E96;
     color: white;
 }
 @media (max-width:469px){

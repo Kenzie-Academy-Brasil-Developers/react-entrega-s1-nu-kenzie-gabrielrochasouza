@@ -13,3 +13,8 @@
     border-radius: 4px;
     box-sizing: border-box;
 }
+@media (max-width:430px){
+    .total{
+        width: 100%;
+    }
+}

@@ -1,13 +1,8 @@
 import './style.css'
 
-import trash from './trash.png'
-import whiteTrash from './white-trash.png'
-
 import {useState} from 'react'
 
 export default function Card({listTransactions,setListTransaction,removeFromList,filterList,setFilterList}){
-    
-
     
     return (
         filterList.map((transaction,index)=>{

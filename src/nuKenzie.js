@@ -12,6 +12,19 @@ function Nukenzie({setIniciated}) {
   const [listTransactions, setListTransaction] = useState([]);
   const [filterList, setFilterList] = useState(listTransactions);
 
+  const [AllSelected,setAllSelected]=useState(true)
+  const [costSelected,setCostSelected]=useState(false)
+  const [entrySelected,setEntrySelected]=useState(false)
+
+  function changeSelection(selection){
+    setAllSelected(false)
+    setCostSelected(false)
+    setEntrySelected(false)
+    if(selection==='Todos') setAllSelected(true)
+    if(selection==='Despesa') setCostSelected(true)
+    if(selection==='Entrada') setEntrySelected(true)
+  }
+
 
   const removeFromList = (index, id) => {
     const newArrList = [...listTransactions];
@@ -40,6 +53,11 @@ function Nukenzie({setIniciated}) {
               setListTransaction={setListTransaction}
               filterList={filterList}
               setFilterList={setFilterList}
+
+              setAllSelected={setAllSelected}
+              setCostSelected={setCostSelected}
+              setEntrySelected={setEntrySelected}
+              
             />
             {listTransactions.length !== 0 && (
               <TotalMoney
@@ -57,6 +75,10 @@ function Nukenzie({setIniciated}) {
               removeFromList={removeFromList}
               filterList={filterList}
               setFilterList={setFilterList}
+              AllSelected={AllSelected}
+              costSelected={costSelected}
+              entrySelected={entrySelected}
+              changeSelection={changeSelection}
             />
           </aside>
         </main>

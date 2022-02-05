@@ -4,11 +4,17 @@ import CardVazio from './CardVazio'
 
 import {useState} from 'react'
 
-export default function List({listTransactions,setListTransaction,removeFromList,setFilterList,filterList}){
-    
-    const [AllSelected,setAllSelected]=useState(true)
-    const [costSelected,setCostSelected]=useState(false)
-    const [entrySelected,setEntrySelected]=useState(false)
+export default function List({
+    listTransactions,
+    setListTransaction,
+    removeFromList,
+    setFilterList,
+    filterList,
+    AllSelected,
+    costSelected,
+    entrySelected,
+    changeSelection
+}){
 
     return (
         <>
@@ -19,9 +25,7 @@ export default function List({listTransactions,setListTransaction,removeFromList
                     className={AllSelected && 'selected'}
                     onClick={()=>{
                         setFilterList( listTransactions )
-                        setAllSelected(true)
-                        setCostSelected(false)
-                        setEntrySelected(false)
+                        changeSelection('Todos')
                     }}
                     >
                         Todos
@@ -32,9 +36,8 @@ export default function List({listTransactions,setListTransaction,removeFromList
                     onClick={()=>{
                         setFilterList(listTransactions)
                         setFilterList( listTransactions.filter(transaction=>transaction.type==='Entrada'))
-                        setAllSelected(false)
-                        setCostSelected(false)
-                        setEntrySelected(true)
+                        changeSelection('Entrada')
+
                     }}
                     >
                         Entradas
@@ -45,9 +48,7 @@ export default function List({listTransactions,setListTransaction,removeFromList
                     onClick={()=>{
                         setFilterList(listTransactions)
                         setFilterList( listTransactions.filter(transaction=>transaction.type==='Saida') )
-                        setAllSelected(false)
-                        setCostSelected(true)
-                        setEntrySelected(false)
+                        changeSelection('Despesa')
                     }}>
                         Despesas
                     </button>
@@ -60,7 +61,7 @@ export default function List({listTransactions,setListTransaction,removeFromList
                     listTransactions={listTransactions} 
                     setListTransaction={setListTransaction}
                     removeFromList={removeFromList}
-                    
+                    changeSelection={changeSelection}
                     filterList={filterList}
                     setFilterList={setFilterList}
                 />)}
